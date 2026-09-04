@@ -3,6 +3,12 @@
 hl.unbind("SUPER + E")
 hl.bind("SUPER + E", hl.dsp.exec_cmd("nautilus"))
 
+-- Scrolling layout: navigate and scroll window into view on screen
+hl.unbind("SUPER + left")
+hl.bind("SUPER + left", hl.dsp.layout("focus l"))
+hl.unbind("SUPER + right")
+hl.bind("SUPER + right", hl.dsp.layout("focus r"))
+
 -- Grow / shrink column width by 5% on the ribbon
 hl.bind("SUPER + equal", hl.dsp.layout("colresize +0.05"), { repeating = true, description = "Grow column width" })
 hl.bind("SUPER + minus", hl.dsp.layout("colresize -0.05"), { repeating = true, description = "Shrink column width" })
